@@ -73,7 +73,7 @@ header("location: welcome.php?fullName=$full_name");
 <label class =" label" >
     Email: 
 <span class="user-box">
-<input type="text" class="input" name="email" placeholder=" Email">
+<input type="text" class="input" name="email" required placeholder=" Email">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $emailErr ?></h5>
@@ -83,7 +83,7 @@ header("location: welcome.php?fullName=$full_name");
 <label class =" label" >
     Password: 
 <span class="user-box">
-<input type="password" class="input" name="pwd" placeholder="Password">
+<input type="password" class="input" name="pwd" required placeholder="Password">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $pwdErr ?></h5>

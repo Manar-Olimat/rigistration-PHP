@@ -192,7 +192,7 @@ header("location: welcome.php?fullName=$full_name");
 <label class =" label" >
     Email: 
 <span class="user-box">
-<input type="text" class="input" name="email" placeholder=" Email">
+<input type="text" required class="input" name="email" placeholder=" Email">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $emailErr ?></h5>
@@ -203,38 +203,38 @@ header("location: welcome.php?fullName=$full_name");
     Full Name: 
 <span class="user-box">
 <div class="err">
-  <input type="text" class="input" name="first-name" placeholder="First name ">
+  <input type="text" required class="input" name="first-name" placeholder="First name ">
 
   <h5 class="errMsg"> <?php echo $nameErr_first ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="mid-name" placeholder="Middle name ">
+ <input type="text" class="input" required name="mid-name" placeholder="Middle name ">
  <h5 class="errMsg"> <?php echo $nameErr_mid ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="last-name" placeholder="Last name ">
+ <input type="text" class="input" required name="last-name" placeholder="Last name ">
  <h5 class="errMsg"> <?php echo $nameErr_last ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="family-name" placeholder="Familly name ">
+ <input type="text" class="input" required name="family-name" placeholder="Familly name ">
  <h5 class="errMsg"> <?php echo $nameErr_family ?></h5>
 </div>
 </span>
 
 </label><br>
-<label class =" label" for="patientAge">
+<label class =" label" >
     Mobile NO: 
 <span class="user-box">
-<input type="text" class="input" name="mobile" placeholder="Mobile">
+<input type="text" class="input" required name="mobile" placeholder="Mobile">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $mobileErr ?></h5>
 </div>
 </label><br>
-<label class =" label" for="patientAge">
+<label class =" label" >
     Birth Date: 
 <span class="user-box">
-<input type="date" class="input" name="birth-date" placeholder="Date of Birth">
+<input type="date" class="input" required name="birth-date" placeholder="Date of Birth">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $dateErr ?></h5>
@@ -244,7 +244,7 @@ header("location: welcome.php?fullName=$full_name");
 <label class =" label" >
     Password: 
 <span class="user-box">
-<input type="password" class="input" name="pwd" placeholder="Password">
+<input type="password" class="input" name="pwd" required placeholder="Password">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $pwdErr ?></h5>
@@ -253,7 +253,7 @@ header("location: welcome.php?fullName=$full_name");
 <label class =" label" >
    Repeate Password: 
 <span class="user-box">
-<input type="password" class="input" name="pwd-conf" placeholder="Repeate Password">
+<input type="password" class="input" name="pwd-conf" required placeholder="Repeate Password">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $repPwdErr ?></h5>

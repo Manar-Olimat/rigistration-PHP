@@ -8,7 +8,7 @@ $id=$_GET["id"];// get id from url always use _get
 $sql="SELECT * FROM users WHERE id=$id";
 
 $getData= $conn->query($sql);
-$user=$getData->fetchAll(PDO::FETCH_ASSOC);
+$user=$getData->fetchAll(PDO::FETCH_OBJ);
 // print_r($food);
 
 
@@ -200,20 +200,20 @@ header("location: admin.php");
     Full Name: 
 <span class="user-box">
 <div class="err">
-  <input type="text" class="input" name="first-name" value="<?php echo $user['first_name']; ?>"  placeholder="First name ">
+  <input type="text" class="input" name="first-name" value="<?php echo $user[0]->first_name; ?>"  placeholder="First name ">
 
   <h5 class="errMsg"> <?php echo $nameErr_first ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="mid-name"  value="<?php echo $user['mid_name'] ?>" placeholder="Middle name ">
+ <input type="text" class="input" name="mid-name"  value="<?php echo $user[0]->mid_name ?>" placeholder="Middle name ">
  <h5 class="errMsg"> <?php echo $nameErr_mid ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="last-name" value="<?php echo $user['last_name'] ?>"  placeholder="Last name ">
+ <input type="text" class="input" name="last-name" value="<?php echo $user[0]->last_name ?>"  placeholder="Last name ">
  <h5 class="errMsg"> <?php echo $nameErr_last ?></h5>
 </div>
 <div class="err">
- <input type="text" class="input" name="family-name"  value="<?php echo $user['family_name'] ?>" placeholder="Familly name ">
+ <input type="text" class="input" name="family-name"  value="<?php echo $user[0]->family_name ?>" placeholder="Familly name ">
  <h5 class="errMsg"> <?php echo $nameErr_family ?></h5>
 </div>
 </span>
@@ -222,7 +222,7 @@ header("location: admin.php");
 <label class =" label">
     Mobile NO: 
 <span class="user-box">
-<input type="text" class="input" name="mobile" value="<?php echo $user['mobile'] ?>"  placeholder="Mobile">
+<input type="text" class="input" name="mobile" value="<?php echo $user[0]->mobile ?>"  placeholder="Mobile">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $mobileErr ?></h5>
@@ -231,7 +231,7 @@ header("location: admin.php");
 <label class =" label">
     Birth Date: 
 <span class="user-box">
-<input type="date" class="input" name="birth-date"  value="<?php echo $user['birth_date'] ?>" placeholder="Date of Birth">
+<input type="date" class="input" name="birth-date"  value="<?php echo $user[0]->birth_date ?>" placeholder="Date of Birth">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $dateErr ?></h5>
@@ -241,7 +241,7 @@ header("location: admin.php");
 <label class =" label" >
     Password: 
 <span class="user-box">
-<input type="password" class="input" name="pwd"  value="<?php echo $user['pwd'] ?>"  placeholder="Password">
+<input type="password" class="input" name="pwd"  value="<?php echo $user[0]->pwd ?>"  placeholder="Password">
 </span>
 <div class="err">
   <h5 class="errMsg"> <?php echo $pwdErr ?></h5>
@@ -262,6 +262,4 @@ header("location: admin.php");
 </body>
 </html>
 
-<?php print_r($user);
-echo $user[0]->id; 
-echo $user[0]->email;?>
+
